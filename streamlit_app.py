@@ -87,7 +87,7 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     df["Body"] = close - df["Open"]
     df["Upper_Wick"] = high - df[["Open", "Close"]].max(axis=1)
-        df["Lower_Wick"] = df[["Open", "Close"]].min(axis=1) - low
+    df["Lower_Wick"] = df[["Open", "Close"]].min(axis=1) - low
     df["Range"] = high - low
     return df
 
